@@ -1,0 +1,216 @@
+:root{
+	--navfooter-background-color: #1D6A96;
+	--txtcolor-color: #D1DDDB;
+	--txtcolornf-color: #85B8CB;
+}
+
+body{
+	margin: 0;
+	padding-bottom: 50px;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	width: 100%;
+	height: auto;
+	background-color: #283B42;
+	color: var(--txtcolor-color);
+}
+
+header{
+	align-self: center;
+}
+
+header img{
+	width: auto;
+}
+
+nav{
+	height: 50px;
+	width: 100%;
+	order: 0;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0px;
+	background-color: var(--navfooter-background-color);
+	box-shadow: 1px 1px 10px black;
+}
+
+.navbutton{
+	margin-top: 12.5px;
+	margin-left: 10px;
+	display: none;
+}
+
+.line{
+	width: 25px;
+	background-color: black;
+	height: 2px;
+	border-radius: 5px;
+}
+
+#line1{
+	margin-bottom: 3px;
+}
+
+#line3{
+	margin-top: 3px;
+}
+
+
+ul{
+	text-align: center;
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	padding-left: 0px;
+	background-color: var(--navfooter-background-color);
+}
+
+ul li{
+	min-width: 100px;
+}
+
+#navlink{
+	text-decoration: none;
+	color: var(--txtcolornf-color);
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#main{
+	display: flex;
+	min-height: 40vh;
+	padding-bottom: 10px;
+	width: 90%;
+	align-self: center;
+	}
+
+main{
+	width: 75%;
+	order: 1;
+	padding-right: 10px;
+}
+
+main p img{
+	width: auto;
+	max-width: 200px;
+	float: right;
+	box-shadow: 3px 3px 10px black;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;;
+}
+aside{
+	width: 25%;
+	order: 1;
+	padding-left: 10px;
+}
+
+footer{
+	height: 50px;
+	width: 100%;
+	order: 2;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: var(--navfooter-background-color);
+	color: var(--txtcolornf-color);
+}
+
+
+/* ANIMATION BURGER*/
+.change .line{ /* WICHTIG OHNE KOMMA */
+	background-color: red;
+	transition: all .5s; /* Smoothe Bewegung */
+}
+
+.change #line1{ /* WICHTIG OHNE KOMMA */
+	transform: translateY(5px) rotateZ(45deg); /* Abstand obere line CENTER, Rotiert um 45 Grad */
+	transition: all .5s; /* Smoothe Bewegung */
+}
+
+.change #line2{ /* WICHTIG OHNE KOMMA */
+	transform: translateY(11px); /* Fällt auf den "Boden" */
+	opacity: 0; /* Sichtbarkeit */
+	transition: ease-in-out .5s; /* Smoothe Bewegung */
+}
+
+.change #line3{ /* WICHTIG OHNE KOMMA */
+	transform: translateY(-5px) rotateZ(-45deg); /* Abstand obere line CENTER, Rotiert um 45 Grad */
+	transition: all .5s; /* Smoothe Bewegung */
+}
+
+.change{
+	display: block;
+}
+/* ANIMATION BURGER ENDE*/
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media screen and (max-width: 600px) {
+			header img{
+				width: 100%;
+			}
+			nav{
+				padding-left: 0px;
+				padding-right: 0px;
+				height: 35px;
+			}
+			
+			.navbutton{
+				display: block;
+				width: 25px;
+				padding-bottom: 4px;
+			}
+			
+			ul{
+				display: none;
+				padding-left: 0px;
+				flex-direction: column;
+				align-items: center;
+				margin-top: 5px;
+			}
+			
+			ul li{
+				width: 100vw;
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}			
+			
+			#main{
+				flex-direction: column;
+				margin-top: 35px;
+				margin-bottom: 35px;
+			}
+
+			main{
+				width: 100%;
+				min-height: 50vh;
+				padding-right: 0px;
+				padding-bottom: 10px;
+			}
+
+			aside{
+				width: 100%;
+				min-height: 50vh;
+				padding-left: 0px;
+				padding-top: 10px;
+			}
+
+			footer{
+				height: 35px;
+			}
+}
+
+/*/* Medium devices (landscape tablets, 768px and up) */
+/*@media only screen and (max-width: 768px) {*/
+/*	*/
+/*	}*/
+/**/
+/*/* Extra large devices (large laptops and desktops, 1200px and up) */
+/*@media only screen and (min-width: 1200px) {*/
+/*	*/
+/*} */
