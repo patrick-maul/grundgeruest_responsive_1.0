@@ -1,0 +1,3 @@
+# grundgeruest_responsive_1.0
+Ein responsives Grundgerüst für eine Webseite, das ich geschrieben haben um zu lernen wie man einen Internetseite schreibt.
+Man merkt es vielleicht...
